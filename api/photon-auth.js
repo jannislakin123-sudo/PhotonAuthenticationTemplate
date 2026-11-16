@@ -3,9 +3,9 @@ export default async function handler(req, res) {
   const ticket = d.Ticket || req.query.Ticket;
   console.log("body:", JSON.stringify(d), "query:", JSON.stringify(req.query));
   try {
-    const r = await fetch("https://PUTYOURTITLEIDHERE.playfabapi.com/Server/AuthenticateSessionTicket", {
+    const r = await fetch("https://2163E.playfabapi.com/Server/AuthenticateSessionTicket", {
       method: "POST",
-      headers: { "Content-Type": "application/json", "X-SecretKey": process.env.PLAYFAB_SECRET },
+      headers: { "Content-Type": "application/json", "X-SecretKey": process.env.GPPO118NIT4YRPUXMYXTOUQS7TNFMMYERGOFFXNI6RADAW5JZX },
       body: JSON.stringify({ SessionTicket: ticket })
     });
     const j = await r.json();
